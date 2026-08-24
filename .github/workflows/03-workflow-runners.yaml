@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show OS
+        shell: bash
         run: |
           echo "This job is running on an Ubuntu runner."
           echo "The runner's OS is $RUNNER_OS"
@@ -17,10 +18,12 @@ jobs:
         run: |
           echo "This job is running on an Windows runner."
           echo "The runner's OS is $RUNNER_OS"
-  # mac-echo:
-  #   runs-on: macos-latest
-  #   steps:
-  #     - name: Show OS
-  #       run: echo "This job is running on a macOS runner."
+  mac-echo:
+    runs-on: macos-latest
+    steps:
+      - name: Show OS
+        run: |
+          echo "This job is running on an Mac runner."
+          echo "The runner's OS is $RUNNER_OS"
 
     
